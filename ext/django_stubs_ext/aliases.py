@@ -6,8 +6,8 @@ if typing.TYPE_CHECKING:
     from django.utils.functional import _StrPromise as StrPromise
 
     # Deprecated type aliases. Use the QuerySet class directly instead.
-    QuerySetAny = _QuerySet
-    ValuesQuerySet = _QuerySet
+    QuerySetAny: typing.TypeAlias = _QuerySet
+    ValuesQuerySet: typing.TypeAlias = _QuerySet
 else:
     from django.db.models.query import QuerySet
     from django.utils.functional import Promise as StrPromise
